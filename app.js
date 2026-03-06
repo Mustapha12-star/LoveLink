@@ -1,103 +1,28 @@
-// قائمة المستخدمين
-const profiles = [
-{
-name: "Sara",
-age: 23,
-bio: "I love travel and music.",
-image: "https://randomuser.me/api/portraits/women/44.jpg"
-},
-{
-name: "Lina",
-age: 25,
-bio: "Coffee lover ☕",
-image: "https://randomuser.me/api/portraits/women/65.jpg"
-},
-{
-name: "Adam",
-age: 27,
-bio: "Gym and fitness 💪",
-image: "https://randomuser.me/api/portraits/men/32.jpg"
-},
-{
-name: "Youssef",
-age: 24,
-bio: "Football and gaming ⚽",
-image: "https://randomuser.me/api/portraits/men/12.jpg"
-}
-];
-
-// عناصر الصفحة
-const profileImage = document.getElementById("profile-image");
-const profileName = document.getElementById("profile-name");
-const profileBio = document.getElementById("profile-bio");
-
-const likeBtn = document.getElementById("like-btn");
-const passBtn = document.getElementById("pass-btn");
-
-let currentIndex = 0;
-
-// عرض المستخدم
-function showProfile() {
-
-if(currentIndex >= profiles.length){
-profileName.innerText = "No more profiles";
-profileBio.innerText = "Come back later";
-profileImage.src = "";
-return;
-}
-
-const profile = profiles[currentIndex];
-
-profileImage.src = profile.image;
-profileName.innerText = profile.name + ", " + profile.age;
-profileBio.innerText = profile.bio;
-}
-
-// زر الإعجاب
-likeBtn.addEventListener("click", () => {
-currentIndex++;
-showProfile();
-});
-
-// زر الرفض
-passBtn.addEventListener("click", () => {
-currentIndex++;
-showProfile();
-});
-
-// تشغيل أول ملف شخصي
-showProfile();
 function createProfile() {
 
-let name = prompt("اكتب اسمك");
+let name = prompt("Enter your name");
 
-if(name){
-
-localStorage.setItem("username", name);
-
+if (name) {
 document.getElementById("result").innerHTML =
-"تم إنشاء الملف التعريفي للمستخدم: " + name;
-
+"Profile created for: " + name;
 }
 
 }
 
-function searchFriends(){
+function searchFriends() {
 
 document.getElementById("result").innerHTML =
-"جاري البحث عن أصدقاء...";
+"Searching for friends...";
 
 }
 
-function startChat(){
+function startChat() {
 
-let message = prompt("اكتب رسالة");
+let message = prompt("Write a message");
 
-if(message){
-
+if (message) {
 document.getElementById("result").innerHTML =
-"أنت قلت: " + message;
-
+"Your message: " + message;
 }
 
 }
