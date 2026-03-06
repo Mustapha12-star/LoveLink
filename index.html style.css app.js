@@ -1,35 +1,38 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>LoveLink</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LoveLink</title>
+
 <style>
+
 body{
 font-family: Arial;
+margin:0;
+background:#f5f5f5;
 text-align:center;
-background:#f4f4f4;
 }
-h1{
-color:#ff2e63;
+
+header{
+background:#ff2e63;
+color:white;
+padding:20px;
 }
+
+.container{
+padding:40px;
+}
+
 button{
-padding:10px 20px;
 background:#ff2e63;
 color:white;
 border:none;
-border-radius:5px;
+padding:12px 25px;
+margin:10px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
 }
-</style>
-</head>
 
-<body>
-
-<h1>LoveLink ❤️</h1>
-<p>Welcome to LoveLink dating app</p>
-
-<button>Create Profile</button>
-<button>Find Friends</button>
-
-</body>
-</html>
+button:hover
