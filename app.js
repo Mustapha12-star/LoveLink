@@ -67,3 +67,37 @@ showProfile();
 
 // تشغيل أول ملف شخصي
 showProfile();
+function createProfile() {
+
+let name = prompt("اكتب اسمك");
+
+if(name){
+
+localStorage.setItem("username", name);
+
+document.getElementById("result").innerHTML =
+"تم إنشاء الملف التعريفي للمستخدم: " + name;
+
+}
+
+}
+
+function searchFriends(){
+
+document.getElementById("result").innerHTML =
+"جاري البحث عن أصدقاء...";
+
+}
+
+function startChat(){
+
+let message = prompt("اكتب رسالة");
+
+if(message){
+
+document.getElementById("result").innerHTML =
+"أنت قلت: " + message;
+
+}
+
+}
